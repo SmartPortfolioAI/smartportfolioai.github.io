@@ -1,0 +1,25 @@
+$(document).ready(function() {
+    $("button.navbar-toggler").click(function() {
+        $("#mobile-nav").fadeIn(100);
+    });
+
+    $("button.mobile-nav-close").click(function() {
+        $("#mobile-nav").fadeOut(100);
+    });
+
+    $("li#menu-link-qsalpha").hover(function() {
+        var left_position = Math.floor($("#menu-link-qsalpha").position().left) - 16 + 'px';
+        $("#menu-pane-qsalpha").css({left: left_position});
+        $("#menu-pane-qsalpha").fadeIn(200);
+    }, function() {
+        $("#menu-pane-qsalpha").fadeOut(200);
+    });
+
+    $("li#menu-link-ebooks").hover(function() {
+        var left_position = Math.floor($("#menu-link-ebooks").position().left) + 16 + 'px';
+        $("#menu-pane-ebooks").css({left: left_position});
+        $("#menu-pane-ebooks").fadeIn(200);
+    }, function() {
+        $("#menu-pane-ebooks").fadeOut(200);
+    });
+});

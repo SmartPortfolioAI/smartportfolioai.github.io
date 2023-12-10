@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://www.quantstart.com/qsalpha/ -->
+<html lang="en"><head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="icon" href="smart_AI/ai.png"/>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="wl3-8ed1QZjI0iYZMv10zoZWYElkMObTfwLlWIj9cpA">
+    <meta name="description" content="Algorithmic trading strategies, backtesting and implementation with C++, Python and pandas.">
+
+<!--     <link rel="icon" href="https://www.quantstart.com/static/images/favicon.png">
+ -->
+    <title>Smart Portfolio AI</title>
+    
+    
+<link href="./smart_AI/css" rel="stylesheet"> 
+<link href="./smart_AI/css(1)" rel="stylesheet"> 
+<link href="./smart_AI/bootstrap.min.css" rel="stylesheet">
+<link href="./smart_AI/prism.css" rel="stylesheet">
+<link href="./smart_AI/qs.css" rel="stylesheet">
+    
+  <script type="text/javascript" async="" src="./smart_AI/ga.js.download"></script><script src="./smart_AI/clipboard.min.js.download"></script><link rel="stylesheet" type="text/css" href="./smart_AI/animate.css" media="all"><link rel="stylesheet" type="text/css" href="./smart_AI/paddle.css" media="all"></head>
+
+  <body data-new-gr-c-s-check-loaded="14.1141.0" data-gr-ext-installed="">
+ 
+<!-- <section class="section main-banner" id="top" data-section="section1">
+  	<img id="bg-video" src="./smart_AI/IMG1.JPG"> </img> -->
+
+<header class="header home-header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://quantstartmedia.s3.amazonaws.com/images/ebook-images/page-header-qsa.jpg);">
+  
+<!-- <nav class="nav">
+  <div class="container nav-container">
+    <div class="nav-row row d-flex justify-content-between align-items-center">
+      <div class="col-2">
+        <ul class="nav-items justify-content-end small-capitals align-items-center">
+          <li class="nav-item">
+            <a class="link-fade" href="https://www.quantstart.com/">QuantStart</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-auto col-logo">
+        <ul id="top-nav-menu" class="nav-items justify-content-end align-items-center">
+          
+          <li class="nav-item">
+            <a class="link-fade" href="https://www.quantstart.com/qsalpha/">QSAlpha</a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="link-fade" href="https://www.quantstart.com/quantcademy/">Quantcademy</a>
+          </li>
+          
+          <li id="menu-link-ebooks" class="nav-item">
+            <a class="link-fade" href="https://www.quantstart.com/qsalpha/#">Books</a>
+            <div id="menu-pane-ebooks" class="nav-items menu-dropdown-pane">
+              <div class="nav-item">
+                <a class="link-fade d-block ml-3 mr-3 my-3 mt-4" href="https://www.quantstart.com/successful-algorithmic-trading-ebook/">Successful Algorithmic Trading</a>
+              </div>
+              <div class="nav-item">
+                <a class="link-fade d-block ml-3 mr-3 my-3 mt-4" href="https://www.quantstart.com/advanced-algorithmic-trading-ebook/">Advanced Algorithmic Trading</a>
+              </div>
+              <div class="nav-item">
+                <a class="link-fade d-block ml-3 mr-3 my-3 mt-4" href="https://www.quantstart.com/cpp-for-quantitative-finance-ebook/">C++ For Quantitative Finance</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="link-fade" href="https://www.quantstart.com/qstrader/">QSTrader</a>
+          </li>
+          <li class="nav-item">
+            <a class="link-fade" href="https://www.quantstart.com/articles/">Articles</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="link-fade" href="https://www.quantstart.com/members/login/">Login</a>
+          </li>
+          
+        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+<!-- <nav id="mobile-nav" class="mobile-nav text-left">
+  <div class="container">
+    <ul class="mt-4 ml-3 mobile-nav-menu">
+      <li class="nav-item">
+        <a class="link-fade d-block" href="https://www.quantstart.com/">QuantStart</a>
+      </li>
+
+      
+      <li class="nav-item">
+        <a class="link-fade d-block pt-3" href="https://www.quantstart.com/qsalpha/">QSAlpha</a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="link-fade d-block pt-3" href="https://www.quantstart.com/quantcademy/">Quantcademy</a>
+      </li>
+      
+
+      <li class="nav-item">
+        <a class="link-fade d-block pt-3" href="https://www.quantstart.com/qsalpha/#">Books</a>
+      </li>
+      <li class="nav-item sub-item">
+        <a class="link-fade d-block ml-3" href="https://www.quantstart.com/successful-algorithmic-trading-ebook/">Successful Algorithmic Trading</a>
+      </li>
+      <li class="nav-item sub-item">
+        <a class="link-fade d-block ml-3" href="https://www.quantstart.com/advanced-algorithmic-trading-ebook/">Advanced Algorithmic Trading</a>
+      </li>
+      <li class="nav-item sub-item">
+        <a class="link-fade d-block ml-3" href="https://www.quantstart.com/cpp-for-quantitative-finance-ebook/">C++ For Quantitative Finance</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="link-fade d-block pt-3" href="https://www.quantstart.com/qstrader/">QSTrader</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="link-fade d-block pt-3" href="https://www.quantstart.com/articles/">Articles</a>
+      </li>
+
+      
+      <li class="nav-item">
+        <a class="link-fade d-block pt-3" href="https://www.quantstart.com/members/login/">Login</a>
+      </li>
+      
+    </ul> -->
+<!--     <button class="nav-toggle mobile-nav-close">
+      <svg id="mobile-nav-close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M19.77,5.63,13.41,12l6.36,6.37a1,1,0,0,1-1.41,1.41L12,13.41,5.63,19.77a1,1,0,0,1-1.44-1.39l0,0L10.58,12,4.21,5.63a1,1,0,0,1,0-1.42,1,1,0,0,1,1.41,0l0,0L12,10.58l6.37-6.37a1,1,0,0,1,1.41,0A1,1,0,0,1,19.77,5.63Z"></path>
+      </svg>
+    </button>
+  </div>
+</nav>
+ -->
+
+  <div class="container hero-container">
+    <section class="mt-5 mb-4">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <!-- <img src="./smart_AI/qsalpha-logo.png" class="center-image mb-5"> -->
+          <h1 style="color:Tomato;"> SMART PORTFOLIO AI </h1>
+          <h1 style="color:#fff;">Find alpha, not beta.</h1>
+          <p class="hero subhero">QSAlpha helps fill your strategy research pipeline, diversify your portfolio and improve your risk-adjusted returns for increased profitability.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</header>
+
+    
+<div class="qclp pt-5 pb-1 bg-qs-dark-grey border-top-blue">
+  <div class="qclp-section mb-5">
+    <div class="container container-full">
+      <div class="row mt-4">
+        <div class="col-md-10 offset-md-1">
+          <div class="qclp-page-container sub-banner text-center">
+            <p class="mb-4 large-text line-height-1.5">QSAlpha is a research membership portal providing up-to-date independently simulated backtests, performance analytics, cross-sectional statistics and implementation details for the latest publicly available systematic trading strategies based on leading academic finance research.</p>
+            <p class="mb-4 large-text line-height-1.5">The service simulates a range of buy &amp; hold and monthly long-only and long/short leveraged systematic trading strategies using low cost ETFs to gain exposure to global asset classes.</p>
+            <p class="mb-4 large-text line-height-1.5">Robust academically observed market anomalies such as asset momentum, mean reversion and market regimes are exploited to produce superior risk-adjusted returns to common benchmarks.</p>
+            <p class="mb-4 large-text line-height-1.5">Risk parity, regime filtering and trend-following techniques are applied to increase returns and minimise drawdowns, providing diversifying strategies to complement your current portfolio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="qclp-join-now-button-container">
+  <div class="container">
+    <a href="https://www.quantstart.com/qsalpha/#payment" class="btn btn-lg btn-primary btn-lg-cta">Subscribe Now!</a>
+  </div>
+</div>
+<h2 align="center">Intraday Gainer</h2>
+ 
+
+<div class="qsalpha-lp-block pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="text-center">
+<!--           <h2>Strategy Screener</h2>
+ -->        </div>
+        <h2>NIFTY, FIN-NIFTY and BANK NIFTY Intraday Option Selling</h2>
+        <p>Intraday strategy uses algorithmic execution for seamless order placement and reduces slippages
+        	<br>
+Executes 1 or 2 trades per day to minimize trading costs while maintaining strong risk-adjusted performance<br>
+
+Non-directional approach involves selling options to create a straddle or strangle<br>
+
+Quantitative methods for precise entry and exit points enhance performance compared to traditional setups<br>
+
+Equity curve shows a significant 60% increase in trading account capital over 11 months with minimal declines<br>
+
+Monthly performance heatmap breaks down gains, indicating consistent growth on a monthly percentage basis<br>
+
+Combined visuals reveal sustained performance, emphasizing stability over isolated exceptional months <br>
+Drawdown plot reveals insights into the frequency and depth of previous losses, as well as the time taken for the strategy to recover.</p>
+      </div>
+      <div class="col-md-6">
+        <img class="qsalpha-lp-img" src="./smart_AI/IMG1.JPG">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="qsalpha-lp-block bg-grey pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img class="qsalpha-lp-img" src="./smart_AI/IMG2.JPG">
+      </div>
+      <div class="col-md-6">
+        <div class="text-center">
+<!--           <h2>Tearsheet</h2>
+ -->        </div>
+<!--         <p class="lp-block-emph">Individual strategy backtest performance can be determined at a glance with our 'tearsheet' overview.</p>
+ -->   
+<p> Overall Performance Summary:
+Daily fluctuation analysis demonstrates consistent performance, with the strategy maintaining performance above -3% on a daily basis. <br>
+The strategy has a solid winning ratio of 60.49%, indicating a majority of profitable trades. <br>
+Despite losses, the losing ratio is moderate at 39.51%.<br>
+The strategy's daily performance shows a maximum loss of -3.2% and a maximum profit of 5.1%.<br>
+It has exhibited a winning streak of 7 consecutive profitable trades.<br>
+The strategy has experienced a losing streak of 4 consecutive losing trades.<br>
+The maximum drawdown is limited to 7%, showcasing a relatively low risk of significant losses.<br>
+The Calmar ratio is high at 15, indicating favorable risk-adjusted returns relative to drawdown.<br>
+The Sharpe ratio is robust at 3.8, signifying strong risk-adjusted performance and the Sortino ratio of 7.4 suggests superior risk-adjusted returns, particularly focusing on downside volatility.<br>
+The strategy demonstrates a solid track record with a balanced mix of winning and losing trades, coupled with controlled risk as reflected in a modest maximum drawdown of 7%. The impressive risk-adjusted performance, indicated by high Calmar, Sharpe, and Sortino ratios, adds further strength to its overall appeal.</p>
+      </div>
+    </div>
+  </div>
+</div>
+ <h2 align="center">Positional Gainer</h2>
+<div class="qsalpha-lp-block pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="text-center">
+         
+        </div>
+        <h2>NIFTY Positional Option Selling</h2>
+        <p>
+        Postional strategy uses algorithmic execution for seamless order placement and reduces slippages
+        	<br>
+Non-directional approach involves selling options to create a strangle using Quantitative methods for precise entry and exit points enhance performance compared to traditional setups<br> 
+Auto Adjustments and fire fighting based on quantitative approches which compares the premium and do option chain analysis.
+<br>
+
+Equity curve shows a significant 60% increase in trading account capital over 11 months with minimal declines<br>
+
+Monthly performance heatmap breaks down gains, indicating consistent growth on a monthly percentage basis<br>
+
+Combined visuals reveal sustained performance, emphasizing stability over isolated exceptional months <br>
+Drawdown plot reveals insights into the frequency and depth of previous losses, as well as the time taken for the strategy to recover.</p>
+      </div>
+      <div class="col-md-6">
+        <img class="qsalpha-lp-img" src="./smart_AI/IMG2.JPG">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="qsalpha-lp-block bg-grey pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img class="qsalpha-lp-img" src="./smart_AI/qsalpha-lp-distributions.png">
+      </div>
+      <div class="col-md-6">
+        <div class="text-center">
+       <!--    <h2>Returns Analytics</h2> -->
+        </div>
+        <p> Overall Performance Summary:
+Daily fluctuation analysis demonstrates consistent performance, with the strategy maintaining performance above -3% on a daily basis. <br>
+The strategy has a solid winning ratio of 60.49%, indicating a majority of profitable trades. <br>
+Despite losses, the losing ratio is moderate at 39.51%.<br>
+The strategy's daily performance shows a maximum loss of -3.2% and a maximum profit of 5.1%.<br>
+It has exhibited a winning streak of 7 consecutive profitable trades.<br>
+The strategy has experienced a losing streak of 4 consecutive losing trades.<br>
+The maximum drawdown is limited to 7%, showcasing a relatively low risk of significant losses.<br>
+The Calmar ratio is high at 15, indicating favorable risk-adjusted returns relative to drawdown.<br>
+The Sharpe ratio is robust at 3.8, signifying strong risk-adjusted performance and the Sortino ratio of 7.4 suggests superior risk-adjusted returns, particularly focusing on downside volatility.<br>
+The strategy demonstrates a solid track record with a balanced mix of winning and losing trades, coupled with controlled risk as reflected in a modest maximum drawdown of 7%. The impressive risk-adjusted performance, indicated by high Calmar, Sharpe, and Sortino ratios, adds further strength to its overall appeal.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="qsalpha-lp-block pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="text-left">
+        <h2>Other Strategies for Risk Management</h2>
+        </div>
+        <p>In addition to core strategies, our approach involves deploying supplementary tactics for risk management and seizing quick opportunities. <br>
+        We employ long strangles and calendar spreads for event-based trading, buy hedges to shield core strategies from sudden shocks, and engage in directional option buying guided by strong system convictions to capture rapid momentums. <br> Furthermore, our risk management incorporates position sizing using various quantitative techniques such as cascading and martingale. This multifaceted strategy aims to enhance overall portfolio performance while mitigating potential risks.</p>
+      </div>
+      <div class="col-md-6">
+        <img class="qsalpha-lp-img" src="./smart_AI/oichart.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="qsalpha-lp-block pt-5 pb-5 bg-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img class="qsalpha-lp-img" src="./smart_AI/overall.jpg">
+      </div>
+      <div class="col-md-6">
+        <div class="text-left">
+          <h2>Over All Portfolio Performance</h2>
+        </div>
+        <p class="lp-block-emph">Our strategy implementations are based on publicly available academic finance references. We provide the original reference(s) as well as similar research within our 'Sources &amp; References' section.</p>
+        <p>All of our cited sources provide a link back to the originating publisher, including academic journals, preprint servers and research networks, to help you carry out more detailed research on any individual strategy.</p>
+        <p>While our strategy implementations are usually derived from a single reference it is often the case that many other references provide identical or similar implementations. To help you further navigate variations in a strategy we also provide detailed references to similar work.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="qclp-join-now-button-container">
+  <div class="container">
+    <a href="https://www.quantstart.com/qsalpha/#payment" class="btn btn-lg btn-primary btn-lg-cta">Subscribe Now!</a>
+  </div>
+</div>
+
+<div class="landing-page-container bg-grey">
+  <div class="landing-page-block">
+    <div class="container container-full">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="text-center mb-5">
+            <h2 class="lp-subtitle">Frequently Asked Questions</h2>
+          </div>
+          <div class="row">
+            <div class="col-12 -4">
+              <p class="mb-3"><strong>What is QSAlpha? </strong><br>
+              QSAlpha is a research membership portal providing up-to-date independently simulated out-of-sample backtests, with extensive performance statistics and implementation rules for the latest publicly available systematic trading strategies based on leading academic finance research.</p>
+            </div>
+            <div class="col-12 mb-4">
+              <p class="mb-3"><strong>How frequently are new strategies added? </strong></br>
+              We currently add strategies on a monthly basis after an extensive in-house research period. <br>
+              Our strategies are thoroughly researched to ensure that they are simple to understand and provide good risk-adjusted and diversified performance. Hence for any strategy that we do include, we have not included many more.</p>
+            </div>
+            <div class="col-12 mb-4">
+              <p class="mb-3"><strong>How many strategies are implemented? </strong><br>
+              We currently have 10 buy &amp; hold (static asset allocation) portfolios and 16 monthly dynamic tactical asset allocation strategies simulated, which are continually updated out-of-sample on a daily basis. <br>
+              New strategies are added after a period of in-house research on a monthly basis.</p>
+            </div>
+            <div class="col-12 mb-4">
+              <p class="mb-3"><strong>Where do your strategy ideas come from?</strong> <br>
+              Our strategy implementations are derived from trading rules outlined in publicly available academic sources such as research networks, financial journals and pre-print servers. We do not implement or backtest proprietary strategies from non-publicly available sources. We always provide detailed references to the original author's work for each strategy. In addition we attempt to provide references for strategies that are similar to those presented. We also provide a selection of our own custom strategy ideas that have featured on QuantStart.com in the past.</p>
+            </div>
+            <div class="col-12 mb-4">
+              <p class="mb-3"><strong>Do any of the strategies use margin or leverage? </strong><br>
+              Most of the presented strategies do not employ leverage and are long-only. However, for educational purposes we have provided alternative versions of some strategies where we have increased leverage. Such strategies are clearly marked. We also provide long/short portfolios for certain strategies, which inherently utilise margin in the form of borrowing stock from a simulated brokerage.</p>
+            </div>
+
+            <div class="col-12 mb-4">
+              <p class="mb-3"><strong>Are all of your provided strategies backtested?</strong> <br>
+              Yes. All of the strategies we present are backtested out-of-sample up to the close of the previous trading day from the current day.</p>
+            </div>
+
+            <div class="col-12 mb-4">
+              <p class="mb-3"><strong>What tools do you use for simulated backtests?</strong> <br>
+              All of the strategy backtests are simulated with the latest version of our own open source backtesting engine to further increase transparency of implementation.</p>
+            </div>
+ 
+            <div class="col-12 mb-4">
+              <p class="mb-3"><strong>Will you test my strategy rules?</strong> <br>
+              While we do not test 'custom rules', we are open to suggestions to backtest strategies that are derived from publicly available research sources, such as research networks, journals or pre-print servers.</p>
+            </div>
+            <div class="col-12 mb-4">
+              <p class="mb-3"><strong>Can I pay with PayPal? </strong><br>
+              Yes. Our payment provider allows payment via credit cards and PayPal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+		
+
+
+        <div class="team_section layout_padding" align="center">
+      <div class="container">
+        <h1 class="what_taital">FOUNDERS</h1>
+       <div class="team_section_2 layout_padding">
+          <div class="row">
+            <div class="col-sm-3">
+     
+              <div class="social_icon">
+                <ul>
+          </ul>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <img src="./smart_AI/shubham1.png" class="image_7">
+              <p class="readable_text">Shubham Kotal</p>
+
+              <p class="readable_text">Senior Risk Analyst</p>
+
+                            <a>MSc. Financial Engineering <br> Ex. Northern Trust Bank</a>
+                            <a><br> +5 Years Experience</a> 
+
+
+              <p class="readable_text_1">Follow Us</p>
+              <div class="social_icon">
+       <!--          <a href="https://twitter.com/shubhamkotal"><img src="./smart_AI/twitter-icon.png"></a> -->
+                  <a href="https://www.linkedin.com/in/shubhamkotal/"><img src="./smart_AI/linkedin-icon.png"></a>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <img src="./smart_AI/shubham1.png" class="image_7">
+              <p class="readable_text">Sachin Kumar</p>
+
+              <p class="readable_text">AVP Risk Analyst</p>
+              <a>MSc. Enocomics <br> Ex. American Express, Ex. EY</a>
+              <a><br> +7 Years Experience</a> 
+              <p class="readable_text_1">Follow Us</p>
+              <div class="social_icon">
+                <ul>
+            <!--      <a href="https://twitter.com/Insider_trader_"><img src="./smart_AI/twitter-icon.png"></a> -->
+                  <a href="https://www.linkedin.com/in/sachin-kumar-42709b141/"><img src="./smart_AI/linkedin-icon.png"></a>
+                </ul>
+              </div>
+            </div></div></div></div></div>
+   
+   <div class="landing-page-container bg-grey">
+  <div class="landing-page-block">
+    <div class="container container-full">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="text-center mb-5">
+          
+    <!--client section end -->
+    <!--footer section start -->
+
+              <div align="center">
+
+              <h3 align="center" id="CONTACT"> <a style="color:black;">Contact/Whats-App</h3>
+             
+              <h3 align="center"><a style="color:black;">
+              <a align="center" style="color:green;" href="tel:7058359273"> +91-7058359273 </h3><br>
+<!-- 
+              <h3><a style="color:white;">Get call-back: <a/><a target="_blank" rel="noopener noreferrer" style="color:green;"href = "https://forms.gle/vZEA9ViCheVYoUjX9"><u>fill-up form</u></a> </a> </h3> -->
+
+              <!-- <a style="color:black;"> Mb: 9284359273 </div> -->
+              <p><a style="color:black;"> Email: <a/><a style="color:black;"href = "mailto:quantstockexchange@gmail.com?">queries@sbi.com</a> </a> <br>
+               <a style="color:black;"> Head Office: Gurgaon<a/><br>
+               <a style="color:black;"> Branches: Delhi, Nagpur, Hyderabad</a><a></a></p><a>
+        <!-- copyright section start -->
+        <div class="copyright_section">
+          <div class="copyright_text">©smart portfolio AI 2023, All Right Reserved </div>
+        </div>
+        <!-- copyright section end -->
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript --> 
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
+</body>
+</a></a></h3></a></a></h3></a></h1></div></body></html>
+
